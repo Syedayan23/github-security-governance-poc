@@ -1,0 +1,5 @@
+# Intentional vulnerable dependencies for Dependabot Alert POC
+# DO NOT USE IN PRODUCTION. These are specifically selected to trigger Dependabot alerts.
+jinja2==2.11.2
+urllib3==1.26.4
+requests==2.20.0

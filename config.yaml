@@ -1,0 +1,7 @@
+application:
+  name: github-security-governance-poc
+  environment: test
+
+security:
+  scanner: github
+  purpose: security-alert-ingestion-testing

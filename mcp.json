@@ -1,0 +1,6 @@
+{
+  "name": "governance-poc-test",
+  "version": "1.0.0",
+  "description": "Test MCP configuration for GitHub security governance POC",
+  "servers": {}
+}

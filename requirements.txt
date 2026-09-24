@@ -1,0 +1,28 @@
+# ==============================================================================
+# SECURITY TEST FIXTURES: DEPENDABOT ALERT GENERATION
+#
+# PURPOSE:
+# This file is intentionally configured with outdated Python packages with
+# published GitHub Security Advisories (GHSA / CVE).
+#
+# DO NOT USE THESE VERSIONS IN PRODUCTION.
+#
+# Selected Packages & Known Advisories:
+# 1. urllib3==1.26.4
+#    - GHSA-v845-jxx5-vc9f (CVE-2023-43804): Cookie leak on cross-origin redirect
+#    - GHSA-g4mx-q9vg-27p4 (CVE-2023-45803): Request body not stripped on HTTP 303 redirect
+#    - GHSA-q2x7-8rv6-6q7h (CVE-2021-33503): Catastrophic backtracking in URL authority parser
+#
+# 2. jinja2==2.11.2
+#    - GHSA-h5c8-rqwp-cp95 (CVE-2024-22195): HTML attribute injection
+#    - GHSA-562r-2v5g-f58g (CVE-2020-28493): ReDoS vulnerability in urlize filter
+#
+# 3. requests==2.20.0
+#    - GHSA-j8r2-6x86-q33q (CVE-2023-32681): Leak of Proxy-Authorization header on redirect
+#    - GHSA-x84v-xcm2-53pg (CVE-2018-18074): Authentication credentials leak on redirect
+# ==============================================================================
+
+urllib3==1.26.4
+jinja2==2.11.2
+requests==2.20.0
+flask>=3.0.0
