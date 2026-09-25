@@ -37,12 +37,18 @@ app = Flask(__name__)
 # ------------------------------------------------------------------------------
 def hash_password_weak(test_password: str) -> str:
     """
-    Test fixture: Uses MD5 for sensitive password hashing.
-    CodeQL flags MD5 as a cryptographically broken hash function.
+    Secure password hashing using PBKDF2-HMAC-SHA256 with a per-password salt.
+    Returns an encoded string containing algorithm, iterations, salt, and hash.
     """
-    hasher = hashlib.md5()
-    hasher.update(test_password.encode("utf-8"))
-    return hasher.hexdigest()
+    salt = os.urandom(16)
+    iterations = 310000
+    derived_key = hashlib.pbkdf2_hmac(
+        "sha256",
+        test_password.encode("utf-8"),
+        salt,
+        iterations,
+    )
+    return f"pbkdf2_sha256${iterations}${salt.hex()}${derived_key.hex()}"
 
 
 # ------------------------------------------------------------------------------
