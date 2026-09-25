@@ -18,6 +18,7 @@ SAFETY NOTICE:
 
 import hashlib
 import logging
+import os
 import pickle
 import subprocess
 import requests
@@ -120,7 +121,8 @@ def start_flask_debug():
     Test fixture: Launches Flask server with debug mode set to True.
     CodeQL flags this because debug mode enables the Werkzeug interactive debugger.
     """
-    app.run(debug=True, host="127.0.0.1", port=5001)
+    debug_enabled = os.getenv("FLASK_DEBUG", "").lower() in ("1", "true", "yes", "on")
+    app.run(debug=debug_enabled, host="127.0.0.1", port=5001)
 
 
 if __name__ == "__main__":
