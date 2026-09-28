@@ -22,7 +22,7 @@
 #    - GHSA-x84v-xcm2-53pg (CVE-2018-18074): Authentication credentials leak on redirect
 # ==============================================================================
 
-urllib3==1.26.4
+urllib3==2.7.0
 jinja2==2.11.2
 requests==2.20.0
 flask>=3.0.0
