@@ -103,8 +103,7 @@ def authenticate_test_user(username: str, test_auth_token: str, test_password: s
     Test fixture: Logs sensitive parameter names directly to console/file.
     CodeQL flags logging variables named password, token, or secret.
     """
-    logger.info("Attempting login for user: %s with token: %s and password: %s",
-                username, test_auth_token, test_password)
+    logger.info("Attempting login for user: %s", username)
     return username == "test_admin"
 
 
