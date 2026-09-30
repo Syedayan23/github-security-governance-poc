@@ -13,7 +13,7 @@
 #    - GHSA-g4mx-q9vg-27p4 (CVE-2023-45803): Request body not stripped on HTTP 303 redirect
 #    - GHSA-q2x7-8rv6-6q7h (CVE-2021-33503): Catastrophic backtracking in URL authority parser
 #
-# 2. jinja2==2.11.2
+# 2. jinja2==3.1.6
 #    - GHSA-h5c8-rqwp-cp95 (CVE-2024-22195): HTML attribute injection
 #    - GHSA-562r-2v5g-f58g (CVE-2020-28493): ReDoS vulnerability in urlize filter
 #
@@ -23,6 +23,6 @@
 # ==============================================================================
 
 urllib3==2.7.0
-jinja2==2.11.2
+jinja2==3.1.6
 requests==2.20.0
 flask>=3.0.0
