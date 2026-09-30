@@ -17,12 +17,12 @@
 #    - GHSA-h5c8-rqwp-cp95 (CVE-2024-22195): HTML attribute injection
 #    - GHSA-562r-2v5g-f58g (CVE-2020-28493): ReDoS vulnerability in urlize filter
 #
-# 3. requests==2.20.0
+# 3. requests==2.33.0
 #    - GHSA-j8r2-6x86-q33q (CVE-2023-32681): Leak of Proxy-Authorization header on redirect
 #    - GHSA-x84v-xcm2-53pg (CVE-2018-18074): Authentication credentials leak on redirect
 # ==============================================================================
 
 urllib3==2.7.0
 jinja2==2.11.2
-requests==2.20.0
+requests==2.33.0
 flask>=3.0.0
